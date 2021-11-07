@@ -2,7 +2,7 @@
 Meandering River Length and Time Scales
 This repository was created by Tobias Hasse (tobiack@udel.edu) to host source code related to my thesis research.
 
-The overall structure of this code is to run my branch of Jon Schwenk's Life Of a Meander Bend (LOMB) code to generate a suite of simulation output and determine the characteristic: 
+The overall structure of this code is to run my Fork of Jon Schwenk's Life Of a Meander Bend (LOMB) code to generate a suite of simulation output and determine the characteristic: 
   Length Scale, 
   Velocity Scale, and 
   Time Scale. 
