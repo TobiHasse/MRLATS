@@ -1,4 +1,5 @@
 %% Main CHAPTER ************ 3 ********************
+% Available at: https://github.com/TobiHasse/MRLATS.
 % Purpose:  This script will call other functions to create the suite of 
 %           meandering river simulations and step through all the
 %           simulation and analysis of Chapter 3 of Tobias Hasse's 
@@ -106,6 +107,7 @@ for i=1:length(CFO) % parameter space
 %     if linear_algorithm && CFO(i)*Ain(i) > 0.138 % this is for the linear 
 %         scaleup = 1;           % which makes such tight bends that the 
 %     end                        % node spacing needs to be closer together
+% initialplanform available at: https://doi.org/10.5281/ZENODO.5651841.
 load initialplanform 
 inplanformname = 'initialplanform';
 X = scaleup*Xo;      
