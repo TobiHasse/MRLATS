@@ -27,9 +27,10 @@
 % This allows you to see commentary and variable definitions, or
 % make adjustements for your simulations
 
-% close all
-% clear
-dir_run_output = 'C:\Users\User\Documents\MATLAB\MyLib\Pub\Ch3\other';
+close all
+clear
+dir_run_output = 'C:\Users\thasse\Documents\MATLAB\test\Ch3 diss';
+% dir_run_output = 'C:\Users\User\Documents\MATLAB\MyLib\Pub\Ch3\other';
 cd(dir_run_output)
 
 save_params_meander()               % parameters for meander model
@@ -40,7 +41,7 @@ save_initial_planform()             % initial random planform
 
 %% initialize variables for meander model
 
-do_you_have_stats_toolbox = 1;  % enter 1 if you have the Statistics 
+do_you_have_stats_toolbox = 0;  % enter 1 if you have the Statistics 
                                 % Toolbox, else enter 0
 sim_time_ky   = .5; % 10        % Adjust this to change simulation length
 sim_time      = sim_time_ky * 1000;
@@ -75,6 +76,7 @@ Ain = [ 10  3    1   ]; %
 
 linear_algorithm = true;
 for ii = 1:2 % both algorithms
+    start_new_algorithm = memory
     alg = 'Do';               % first time, use linear parameters algorithm
     desc = sprintf(strcat('Results from linear parametric testing.',...
         ' low value runs completed using \nrecursive planforms and',...
@@ -88,6 +90,7 @@ for ii = 1:2 % both algorithms
         ' higher Eo. Double check: algorithm = %s'), alg);
     end
 for i=1:length(CFO) % parameter space
+    start_new_model = memory
     outfile = sprintf('Hasse_param_A%s_Cfo%s_testing_%s_ka_%s',...
         num2str(Ain(i)),num2str(CFO(i)),num2str(sim_time_ky),alg)
     if Ain(i)>20
@@ -169,9 +172,9 @@ figure(99)
 end % i parameter space
 
 %% save my data
-dir_run_output = 'C:\Users\User\Documents\MATLAB\MyLib\Pub\Ch3\other';
-% change to new directory for files to use next time
-cd 'C:\Users\User\Documents\MATLAB\MyLib\Pub\Ch3\data';
+% dir_run_output = 'C:\Users\User\Documents\MATLAB\MyLib\Pub\Ch3\other';
+% % change to new directory for files to use next time
+% cd 'C:\Users\User\Documents\MATLAB\MyLib\Pub\Ch3\data';
 
 % Note the "_" at the start of the "Parametric testing" file avoids
 % overwriting important output.  Used for testing only.  If you leave this
