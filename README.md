@@ -7,6 +7,7 @@ This code is intended to determine three characteristic emeergent parameters fro
 - Length Scale
 - Velocity Scale, and
 - Time Scale
+
 The Time Scale is of particular untility because it provides an estimate of the characteristic sediment storage timescale without the intensive effort required by field work or simulations such as the simulation of github.com/TobiHasse/MRDAST
 These characteristic emergent parameters are determined by simulating a suite of meandering rivers across a wide range of inputs
 
